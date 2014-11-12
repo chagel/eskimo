@@ -1,0 +1,6 @@
+h2 Paste anything..
+
+= form_for @post, html: {class: 'pure-form pure-form-stacked'} do |f|
+  fieldset
+    = f.text_area :body, rows: 20, style: 'width:100%'
+    = f.submit :Submit, class: 'pure-button pure-button-primary'
