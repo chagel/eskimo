@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get ':id' => 'posts#show', as: :short_post
+  get ':uid' => 'posts#show', as: :short_post
   
   resources :posts
 

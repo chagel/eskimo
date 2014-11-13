@@ -36,3 +36,6 @@ gem 'spring',        group: :development
 
 gem 'slim'
 gem 'pure-rails'
+gem "mongoid", "~> 4.0.0"
+gem "mongoid-sequence", github: 'CreaLettres/mongoid-sequence'
+gem 'pg'

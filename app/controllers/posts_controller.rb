@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post, notice: 'Post was successfully created.'
+      redirect_to short_post_url(@post.uid), notice: 'Post was successfully created.'
     else
       render :new
     end
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = Post.find_by(uid: params[:uid])
     end
 
     # Only allow a trusted parameter "white list" through.
