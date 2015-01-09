@@ -4,3 +4,7 @@ h2 Paste anything..
   fieldset
     = f.text_area :body, rows: 20, style: 'width:100%'
     = f.submit :Submit, class: 'pure-button pure-button-primary'
+
+hr
+
+= render_post Post.last
