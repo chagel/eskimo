@@ -3,6 +3,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    if qrcable?(@post)
+      @code = RQRCode::QRCode.new(@post.body, size: 10, level: :h)
+    end
   end
 
   # GET /posts/new
@@ -13,7 +16,6 @@ class PostsController < ApplicationController
   # POST /posts
   def create
     @post = Post.new(post_params)
-
     if @post.save
       redirect_to short_post_url(@post.uid), notice: 'Post was successfully created.'
     else

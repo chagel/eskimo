@@ -11,3 +11,8 @@ div.post
 
   pre
     = render_post @post
+
+  hr
+
+  div.qrcode
+    - render_qrcode @code if @code
