@@ -22,7 +22,6 @@ gem 'turbolinks'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development do 
   gem 'spring'
-  gem 'capistrano', '~> 2.15.4'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
